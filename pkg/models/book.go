@@ -81,6 +81,7 @@ func (b *Book) UpdateBook(ID int64) (*Book, error) {
 	if err != nil {
 		return nil, err
 	}
+	b.ID = ID
 	return b, nil
 }
 
