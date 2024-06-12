@@ -42,7 +42,7 @@ func CreateBook(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	// Write response with the created book data
-	w.WriteHeader(http.StatusOK)
+	w.WriteHeader(http.StatusCreated)
 	w.Write(res)
 }
 
@@ -182,6 +182,6 @@ func DeleteBook(w http.ResponseWriter, r *http.Request) {
 	// Respond with a success message
 	res, _ := json.Marshal(fmt.Sprintf("Book with ID %s deleted successfully", bookId))
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
+	w.WriteHeader(http.StatusNoContent)
 	w.Write(res)
 }

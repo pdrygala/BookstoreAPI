@@ -55,6 +55,7 @@ func Connect() {
 	if err != nil {
 		panic(err)
 	}
+	fmt.Println("Succesfully connected to DB")
 
 	db = d
 }
